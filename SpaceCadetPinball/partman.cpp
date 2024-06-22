@@ -119,6 +119,7 @@ datFileStruct* partman::load_records(LPCSTR lpFileName)
 				bmp->XPosition = bmpHeader.XPosition;
 				bmp->YPosition = bmpHeader.YPosition;
 			}
+			/*
 			else if (entryType == datFieldTypes::Bitmap16bit)
 			{
 				_hread(fileHandle, &zMapHeader, sizeof(dat16BitBmpHeader));
@@ -131,6 +132,7 @@ datFileStruct* partman::load_records(LPCSTR lpFileName)
 				_hread(fileHandle, zmap->ZBuffer, length);
 				entryData->Buffer = reinterpret_cast<char*>(zmap);
 			}
+			*/
 			else
 			{
 				char* entryBuffer = static_cast<char*>(memory::allocate(fieldSize));
